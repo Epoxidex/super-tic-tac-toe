@@ -1,0 +1,6 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/Epoxidex/super-tic-tac-toe-api
+[submodule "client"]
+	path = client
+	url = https://github.com/alwaysmeow/super-tic-tac-toe-frontend
