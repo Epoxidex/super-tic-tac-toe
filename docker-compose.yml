@@ -15,7 +15,7 @@ services:
       - sttt-network
 
   super-tic-tac-toe-client:
-    container_name: sttt-api
+    container_name: sttt-client
     build: ./client
     image: sttt-client
     ports:
