@@ -2,12 +2,27 @@ version: '3.8'
 
 services:
   super-tic-tac-toe-api:
-    container_name: supertictactoeapi
-    build: ./
-    image: stttapi
+    container_name: sttt-api
+    build: ./api
+    image: sttt-api
     environment:
       - ASPNETCORE_HTTP_PORTS=8080
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "8080:8080"
       - "8081:8081"
+    networks:
+      - sttt-network
+
+  super-tic-tac-toe-client:
+    container_name: sttt-api
+    build: ./client
+    image: sttt-client
+    ports:
+      - "3000:3000"
+    networks:
+      - sttt-network
+
+networks:
+  sttt-network:
+    driver: bridge
