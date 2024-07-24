@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  super-tic-tac-toe-api:
+  api:
     container_name: sttt-api
     build: ./api
     image: sttt-api
@@ -14,7 +14,7 @@ services:
     networks:
       - sttt-network
 
-  super-tic-tac-toe-client:
+  client:
     container_name: sttt-client
     build: ./client
     image: sttt-client
