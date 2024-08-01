@@ -19,7 +19,7 @@ services:
     build: ./client
     image: sttt-client
     ports:
-      - "3000:3000"
+      - "9000:9000"
     networks:
       - sttt-network
 
