@@ -19,11 +19,9 @@ services:
     build: ./client
     image: sttt-client
     ports:
-      - "9000:9000"
+      - "3000:3000"
     networks:
       - sttt-network
-    stdin_open: true
-    tty: true
 
 networks:
   sttt-network:
